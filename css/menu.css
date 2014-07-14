@@ -1,0 +1,118 @@
+.gurtl0onorm {
+	padding: 4px;
+	font: 12px Arial, Tahoma, Verdana, Geneva, Helvetica, sans-serif;
+	text-decoration: none;
+	border: 1px solid #412207;
+	border-left: 4px solid #412207;
+	background: #412207;
+	color: white;
+	cursor: pointer;
+}
+.gurtl0onorm a {
+	font: 12px Arial, Tahoma, Verdana, Geneva, Helvetica, sans-serif;
+	color: white;
+	cursor: pointer;
+}
+
+.gurtl0oover {
+	padding: 4px;
+	font: 12px Arial, Tahoma, Verdana, Geneva, Helvetica, sans-serif;
+	text-decoration: none;
+	border: 1px solid #603813;
+	border-left: 4px solid #E1B700;
+	background: #603813;
+	color: white;
+	cursor: pointer;
+}
+
+.gurtl0oover a{
+	font: 12px Arial, Tahoma, Verdana, Geneva, Helvetica, sans-serif;	
+	text-decoration: underline;
+	color: white;
+	
+	
+}
+
+
+.gurtl0oclck {
+	padding: 4px;
+	font: 12px Arial, Tahoma, Verdana, Geneva, Helvetica, sans-serif;
+	text-decoration: none;
+	border: 1px solid #603813;
+	border-left: 4px solid #E1B700;
+	background: #a66124;
+	color: white;
+	cursor: pointer;
+}
+.gurtl0oclck a{
+	font: 12px Arial, Tahoma, Verdana, Geneva, Helvetica, sans-serif;
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.gurtl1onorm {
+	padding: 3px;
+	font: 12px Arial, Tahoma, Verdana, Geneva, Helvetica, sans-serif;
+	text-decoration: none;
+	border: 1px solid white;
+	border-left: 4px solid #FFF352;
+	background: #FFF352;
+	color: #243D4B;
+	cursor: pointer;
+}
+
+.gurtl1onorm a{
+	font: 12px Arial, Tahoma, Verdana, Geneva, Helvetica, sans-serif;
+	text-decoration: none;
+	color: #243D4B;
+	cursor: pointer;
+}
+
+.gurtl1oover {
+	padding: 3px;
+	font: 12px Arial, Tahoma, Verdana, Geneva, Helvetica, sans-serif;
+	text-decoration: none;
+	border: 1px solid white;
+	border-left: 4px solid #E1B700;
+	background: #FFF352;
+	color: #243D4B;
+	cursor: pointer;
+}
+.gurtl1oover a{
+	
+	font: 12px Arial, Tahoma, Verdana, Geneva, Helvetica, sans-serif;
+	text-decoration: underline;
+	color: #243D4B;
+	cursor: pointer;
+}
+
+
+
+.gurtl1oclck {
+	padding: 3px;
+	font: 12px Arial, Tahoma, Verdana, Geneva, Helvetica, sans-serif;
+	text-decoration: none;
+	border: 1px solid white;
+	border-left: 4px solid #E1B700;
+	background: #DBDFDF;
+	color: #243D4B;
+	cursor: pointer;
+}
+
+.gurtl1oclck a{
+	font: 12px Arial, Tahoma, Verdana, Geneva, Helvetica, sans-serif;
+	text-decoration: none;
+	color: #243D4B;
+	cursor: pointer;
+}
+
+
+

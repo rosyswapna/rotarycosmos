@@ -1,0 +1,40 @@
+[18-Jul-2013 11:19:46 GMT] PHP Notice:  Undefined index: 51e7aadc3e602usr_ses_id in /home/cosm123/public_html/freichat/server/freichat.php on line 79
+[18-Jul-2013 11:19:46 GMT] PHP Notice:  Undefined index: 51e7aadc3e602usr_name in /home/cosm123/public_html/freichat/server/freichat.php on line 80
+[18-Jul-2013 11:19:46 GMT] PHP Notice:  Undefined index: 51e7aadc3e602room_created in /home/cosm123/public_html/freichat/server/plugins/chatroom/chatroom.php on line 142
+[18-Jul-2013 11:19:46 GMT] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/cosm123/public_html/freichat/server/plugins/chatroom/chatroom.php on line 144
+[31-Jul-2013 18:04:50 GMT] PHP Notice:  Undefined index: 51e7aadc3e602usr_ses_id in /home/cosm123/public_html/freichat/server/freichat.php on line 79
+[31-Jul-2013 18:04:50 GMT] PHP Notice:  Undefined index: 51e7aadc3e602usr_name in /home/cosm123/public_html/freichat/server/freichat.php on line 80
+[31-Jul-2013 18:04:50 GMT] PHP Notice:  Undefined index: 51e7aadc3e602room_created in /home/cosm123/public_html/freichat/server/plugins/chatroom/chatroom.php on line 142
+[31-Jul-2013 18:04:50 GMT] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/cosm123/public_html/freichat/server/plugins/chatroom/chatroom.php on line 144
+[24-Aug-2013 06:35:54 GMT] PHP Notice:  Undefined index: 51e7aadc3e602usr_ses_id in /home/cosm123/public_html/freichat/server/freichat.php on line 79
+[24-Aug-2013 06:35:54 GMT] PHP Notice:  Undefined index: 51e7aadc3e602usr_name in /home/cosm123/public_html/freichat/server/freichat.php on line 80
+[24-Aug-2013 06:35:54 GMT] PHP Notice:  Undefined index: 51e7aadc3e602room_created in /home/cosm123/public_html/freichat/server/plugins/chatroom/chatroom.php on line 142
+[24-Aug-2013 06:35:54 GMT] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/cosm123/public_html/freichat/server/plugins/chatroom/chatroom.php on line 144
+[24-Aug-2013 06:36:28 GMT] PHP Notice:  Undefined index: 51e7aadc3e602usr_ses_id in /home/cosm123/public_html/freichat/server/freichat.php on line 79
+[24-Aug-2013 06:36:28 GMT] PHP Notice:  Undefined index: 51e7aadc3e602usr_name in /home/cosm123/public_html/freichat/server/freichat.php on line 80
+[24-Aug-2013 06:36:28 GMT] PHP Notice:  Undefined index: 51e7aadc3e602room_created in /home/cosm123/public_html/freichat/server/plugins/chatroom/chatroom.php on line 142
+[24-Aug-2013 06:36:28 GMT] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/cosm123/public_html/freichat/server/plugins/chatroom/chatroom.php on line 144
+[30-Aug-2013 13:38:38 GMT] PHP Notice:  Undefined index: 51e7aadc3e602usr_ses_id in /home/cosm123/public_html/freichat/server/freichat.php on line 79
+[30-Aug-2013 13:38:38 GMT] PHP Notice:  Undefined index: 51e7aadc3e602usr_name in /home/cosm123/public_html/freichat/server/freichat.php on line 80
+[30-Aug-2013 13:38:38 GMT] PHP Notice:  Undefined index: 51e7aadc3e602room_created in /home/cosm123/public_html/freichat/server/plugins/chatroom/chatroom.php on line 142
+[30-Aug-2013 13:38:38 GMT] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/cosm123/public_html/freichat/server/plugins/chatroom/chatroom.php on line 144
+[30-Aug-2013 13:40:49 GMT] PHP Notice:  Undefined index: 51e7aadc3e602usr_ses_id in /home/cosm123/public_html/freichat/server/freichat.php on line 79
+[30-Aug-2013 13:40:49 GMT] PHP Notice:  Undefined index: 51e7aadc3e602usr_name in /home/cosm123/public_html/freichat/server/freichat.php on line 80
+[30-Aug-2013 13:40:49 GMT] PHP Notice:  Undefined index: 51e7aadc3e602room_created in /home/cosm123/public_html/freichat/server/plugins/chatroom/chatroom.php on line 142
+[30-Aug-2013 13:40:49 GMT] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/cosm123/public_html/freichat/server/plugins/chatroom/chatroom.php on line 144
+[26-Sep-2013 19:01:24 GMT] PHP Notice:  Undefined index: 51e7aadc3e602usr_ses_id in /home/cosm123/public_html/freichat/server/freichat.php on line 79
+[26-Sep-2013 19:01:24 GMT] PHP Notice:  Undefined index: 51e7aadc3e602usr_name in /home/cosm123/public_html/freichat/server/freichat.php on line 80
+[26-Sep-2013 19:01:24 GMT] PHP Notice:  Undefined index: 51e7aadc3e602room_created in /home/cosm123/public_html/freichat/server/plugins/chatroom/chatroom.php on line 142
+[26-Sep-2013 19:01:24 GMT] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/cosm123/public_html/freichat/server/plugins/chatroom/chatroom.php on line 144
+[29-Sep-2013 11:33:03 GMT] PHP Notice:  Undefined index: 51e7aadc3e602usr_ses_id in /home/cosm123/public_html/freichat/server/freichat.php on line 79
+[29-Sep-2013 11:33:03 GMT] PHP Notice:  Undefined index: 51e7aadc3e602usr_name in /home/cosm123/public_html/freichat/server/freichat.php on line 80
+[29-Sep-2013 11:33:03 GMT] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/cosm123/public_html/freichat/server/freichat.php on line 662
+[29-Sep-2013 11:33:03 GMT] PHP Notice:  Undefined index: 51e7aadc3e602usr_ses_id in /home/cosm123/public_html/freichat/server/freichat.php on line 79
+[29-Sep-2013 11:33:03 GMT] PHP Notice:  Undefined index: 51e7aadc3e602usr_name in /home/cosm123/public_html/freichat/server/freichat.php on line 80
+[06-Nov-2013 11:19:09 GMT] PHP Notice:  Undefined index: 51e7aadc3e602usr_ses_id in /home/cosm123/public_html/freichat/server/freichat.php on line 79
+[06-Nov-2013 11:19:09 GMT] PHP Notice:  Undefined index: 51e7aadc3e602usr_name in /home/cosm123/public_html/freichat/server/freichat.php on line 80
+[06-Nov-2013 11:19:09 GMT] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/cosm123/public_html/freichat/server/freichat.php on line 662
+[10-Jan-2014 06:22:26 GMT] PHP Notice:  Undefined index: 51e7aadc3e602usr_ses_id in /home/cosm123/public_html/freichat/server/freichat.php on line 79
+[10-Jan-2014 06:22:26 GMT] PHP Notice:  Undefined index: 51e7aadc3e602usr_name in /home/cosm123/public_html/freichat/server/freichat.php on line 80
+[10-Jan-2014 06:22:26 GMT] PHP Notice:  Undefined index: 51e7aadc3e602room_created in /home/cosm123/public_html/freichat/server/plugins/chatroom/chatroom.php on line 142
+[10-Jan-2014 06:22:26 GMT] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/cosm123/public_html/freichat/server/plugins/chatroom/chatroom.php on line 144

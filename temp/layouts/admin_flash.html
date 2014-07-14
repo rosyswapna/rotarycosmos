@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> <?php if (!empty($title)) echo $title ?></title>
+  <?php if (!empty($js)) echo $js ?><?php if (!empty($css)) echo $css ?>
+<link rel="shortcut icon" href="../images/layouts/default/favicon.ico" />
+<link href="../css/default.css" rel="stylesheet" type="text/css" />
+<link href="../css/sf_menu.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/ecmascript" src="../js/jquery.min.js"></script>
+<script type="text/ecmascript" src="../js/superfish.js"></script>
+<style type="text/css">
+<!--
+.style1 {
+	color: #000099;
+	font-weight: bold;
+}
+-->
+</style>
+<?php 
+if(isset($_SESSION[SESSION_TITLE.'flash_redirect_page']) && trim($_SESSION[SESSION_TITLE.'flash_redirect_page'])!=""){
+	$flash_redirect_page = $_SESSION[SESSION_TITLE.'flash_redirect_page'];
+	$_SESSION[SESSION_TITLE.'flash_redirect_page'] = ""; 
+}else{
+	$flash_redirect_page = DEFAULT_REDIRECT_PAGE;
+}
+
+if(isset($_SESSION[SESSION_TITLE.'flash_refresh_page']) && trim($_SESSION[SESSION_TITLE.'flash_refresh_page'])!="" && trim($_SESSION[SESSION_TITLE.'flash_refresh_page']) > 0){
+	$flash_refresh_page = $_SESSION[SESSION_TITLE.'flash_refresh_page'];
+	$_SESSION[SESSION_TITLE.'flash_refresh_page'] = ""; 
+}else{
+	$flash_refresh_page = 6;
+}
+
+?>
+<meta http-equiv="Refresh" content="<?php echo $flash_refresh_page ?>;url=<?php echo $flash_redirect_page ?>"/>
+</head>
+
+<body>
+<div class="outer">
+	<div class="inner">
+    	<div class="header">
+        	<div class="logo"><img src="../images/layouts/default/rilogo.png" /></div>
+            <div class="name"><img src="../images/layouts/default/name.png" /></div>
+            <div class="theme"><img src="../images/layouts/default/theme.png" border="1" /></div>
+            <div class="contacts"> 
+            	Contact: 0484 xxx xxx <br />
+                Email: mail@rotaryeclub.org
+            </div>
+            
+            <div class="menu_container">
+            	<div class="menu">
+ 
+
+
+<?php if (!empty($menu)) echo $menu ?>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+
+        <?php if (!empty($content)) echo $content;
+        echo $this->plugin_output;  ?>
+       </div>
+    </div>
+    <div class="footer">
+        <div class="footer_wrapper">
+        	<table width="100%" border="0">
+              <tr>
+                <td width="50" rowspan="2" align="left" valign="middle"><img src="../images/layouts/default/rilogo.png" width="50" /></td>
+                <td width="286" rowspan="2" align="left" valign="middle"><span class="style1">Rotary International</span></td>
+                <td width="650">
+                <div class="menu_foo">
+                    <div class="menu_item_foo">Home</a></div>
+                    <div class="menu_item_foo">E-club's Column</a></div> 
+                    <div class="menu_item_foo">About E-club</a></div> 
+                    <div class="menu_item_foo">About Rotary</a></div> 
+                    <div class="menu_item_foo">Forum</a></div> 
+                    <div class="menu_item_foo">Events</a></div> 
+                    <div class="menu_item_foo">Make Up</a></div>
+                    <div class="menu_item_foo">Site Map</a></div>
+                </div>                </td>
+              </tr>
+              <tr>
+                <td align="right" valign="middle"> <img src="../images/layouts/default/fb1.png" width="24" /> &nbsp; <img src="../images/layouts/default/twitter.png" width="24" /> &nbsp; <img src="../images/layouts/default/ut.png" width="24" /></td>
+              </tr>
+              <tr>
+                <td colspan="2"><div class="foo_col1">Copyright © Rotary eClub. All Rights Reserved.</div></td>
+                <td><div class="foo_col2">Contact Us | Privacy Policy | Terms of Use</div></td>
+              </tr>
+            </table>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

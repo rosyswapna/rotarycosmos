@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> <?php if (!empty($title)) echo $title ?></title>
+  <?php if (!empty($js)) echo $js ?><?php if (!empty($css)) echo $css ?>
+<link rel="shortcut icon" href="images/layouts/default/favicon.ico" />
+<link href="css/default.css" rel="stylesheet" type="text/css" />
+<link href="css/sf_menu.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/orbit-1.2.3.css">
+<script type="text/ecmascript" src="js/jquery.min.js"></script>
+<script type="text/ecmascript" src="js/superfish.js"></script>
+<script type="text/ecmascript" src="js/jquery.orbit-1.2.3.js"></script>
+<style type="text/css">
+<!--
+.style1 {
+	color: #000099;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body>
+<div class="outer">
+	<div class="inner">
+    	<div class="header">
+        	<div class="logo"><a href="http://rotarycochincosmos.org"><img src="../images/layouts/default/rilogo.png" /></a></div>
+            <div class="name"><a href="http://rotarycochincosmos.org"><img src="../images/layouts/default/name.png" /></a></div>
+            <div class="theme"><img src="images/layouts/default/theme.png" border="1" /></div>
+            <div class="contacts"> 
+            	
+            </div>
+            
+            <div class="menu_container">
+            	<div class="menu">
+ 
+
+
+<?php if (!empty($menu)) echo $menu ?>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+
+        <?php if (!empty($content)) echo $content;
+        echo $this->plugin_output;  ?>
+       </div>
+    </div>
+    <div class="footer">
+        <div class="footer_wrapper">
+        	<table width="100%" border="0">
+              <tr>
+                <td width="50" rowspan="2" align="left" valign="middle"></td>
+                <td width="286" rowspan="2" align="left" valign="middle"></td>
+                <td width="650">
+                <div class="menu_foo">
+                    <div class="menu_item_foo">Home</a></div>
+                    <div class="menu_item_foo">About Cochin Cosmos</a></div> 
+                    <div class="menu_item_foo">About Rotary</a></div> 
+                    <div class="menu_item_foo">Forum</a></div> 
+                    <div class="menu_item_foo">Events</a></div> 
+                    <div class="menu_item_foo">Make Up</a></div>
+                    <div class="menu_item_foo">Site Map</a></div>
+                </div>                </td>
+              </tr>
+              <tr>
+                <td align="right" valign="middle"> <img src="images/layouts/default/fb1.png" width="24" /> &nbsp; <img src="images/layouts/default/twitter.png" width="24" /> &nbsp; <img src="images/layouts/default/ut.png" width="24" /></td>
+              </tr>
+              <tr>
+                <td colspan="2"><div class="foo_col1">Copyright © Rotary Cochin Cosmos. All Rights Reserved.</div></td>
+                <td><div class="foo_col2">Contact Us | Privacy Policy | Terms of Use</div></td>
+              </tr>
+            </table>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
