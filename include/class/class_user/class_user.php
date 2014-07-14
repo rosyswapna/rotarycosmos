@@ -271,47 +271,49 @@ function forgot_password_email(){
         $strTo="";
         $strSubject="";
         $strSQL = "SELECT M.first_name,M.last_name FROM users U, memberdetails M WHERE U.username = '".$this->username."' AND M.user_id = U.id";
-            $rsRES = mysql_query($strSQL,$this->connection) or die(mysql_error(). $strSQL );
-            if ( mysql_num_rows($rsRES) > 0 ){
+        $rsRES = mysql_query($strSQL,$this->connection) or die(mysql_error(). $strSQL );
+        if ( mysql_num_rows($rsRES) > 0 ){
                 
             $this->first_name = mysql_result($rsRES,0,'first_name');
             $this->last_name = mysql_result($rsRES,0,'last_name');
             
-        if($this->first_name!='' && $this->last_name!=''){
-        $name=$this->first_name." ".$this->last_name;
-        }else
-        {
-        $name=$this->username;  
+            if($this->first_name!='' && $this->last_name!=''){
+                $name=$this->first_name." ".$this->last_name;
+            }else
+            {
+            $name=$this->username;  
+                
+            }
+
+
+            $strFrom=EMAIL_NO_REPLY;
+            $strTo=$this->username;
+            $headers  .= 'MIME-Version: 1.0' . "\r\n";
+            $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+            'X-Mailer: PHP/' . phpversion(). "\r\n";
+            $headers .= "From: Mydailytest.com <".$strFrom.">"."\r\n";
+          
+
+            $strSubject = "Password Reset email";
+             $strMailbody .= "Dear ".$name.",<br /><br />";
+           // $strMailbody .= "You have requested for a password reset link.";
+
+            $strMailbody .= "<a href='".WEB_URL."/change_password_by_url.php?password_token=".$this->password;
+             $strMailbody .="&access=".ROLL_MEMBER;
+            $strMailbody .= "'>Click Here To Reset Your Password</a><br />Thanks,<br />
+                ".WEB_NAME."<br /><br />";
+            $strMailbody .="If clicking the link does not work, just copy and paste the entire link into your browser. If you are still having problems, simply forward this email to ".EMAIL_SUPPORT." and we will do our best to help you.";
+        
+       
+            $strMailbody=$this->get_email_template($strMailbody);
+            //   echo  $strMailbody;exit();
+
             
-        }
 
-
-        $strFrom=EMAIL_NO_REPLY;
-        $strTo=$this->username;
-        $headers  .= 'MIME-Version: 1.0' . "\r\n";
-        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-        'X-Mailer: PHP/' . phpversion(). "\r\n";
-        $headers .= "From: Mydailytest.com <".$strFrom.">"."\r\n";
-      
-
-        $strSubject = "Password Reset email";
-         $strMailbody .= "Dear ".$name.",<br /><br />";
-       // $strMailbody .= "You have requested for a password reset link.";
-
-        $strMailbody .= "<a href='".WEB_URL."/change_password_by_url.php?password_token=".$this->password;
-         $strMailbody .="&access=".ROLL_MEMBER;
-        $strMailbody .= "'>Click Here To Reset Your Password</a><br />Thanks,<br />
-            ".WEB_NAME."<br /><br />";
-        $strMailbody .="If clicking the link does not work, just copy and paste the entire link into your browser. If you are still having problems, simply forward this email to ".EMAIL_SUPPORT." and we will do our best to help you.";
-    
-   
-    $strMailbody=$this->get_email_template($strMailbody);
-     echo  $strMailbody;exit();
-
-    
-
-    mail($strTo,$strSubject,$strMailbody,$headers); 
-    return true;
+            if(mail($strTo,$strSubject,$strMailbody,$headers))
+                return true;
+            else
+                return false;
         }
 
     }

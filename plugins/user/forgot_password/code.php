@@ -23,13 +23,15 @@ if (isset($_POST['submit'])){
       $myuser->password=$chk;
       $chk_email=$myuser->forgot_password_email();
 
-      if($chk_email==true){
-        $_SESSION[SESSION_TITLE.'flash'] ="An email with password reset link has been sent to ".$myuser->username.". Please check your email.";
-        header( "Location: index.php");
-        exit();
+      if($chk_email){
+          $_SESSION[SESSION_TITLE.'flash'] = "An email with password reset link has been sent to ".$myuser->username.". Please check your email.";
+          $_SESSION[SESSION_TITLE.'flash_redirect_page'] = "index.php";
+          header( "Location: flash.php");
+          exit();
       }else{
         $_SESSION[SESSION_TITLE.'flash'] =$RD_MSG_email_send_failed;
-        header( "Location: index.php");
+        $_SESSION[SESSION_TITLE.'flash_redirect_page'] = "index.php";
+        header( "Location: flash.php");
         exit();
       } 
   }
