@@ -2,6 +2,7 @@
 //User Types
 define("ROLL_ADMIN", 1);
 define("ROLL_MEMBER", 2);
+define("ROLL_GUEST", 3);
 
 define("ADMINISTRATOR", 999);
 
@@ -31,8 +32,10 @@ define("EMAIL_INFO", "info@rotarycochincosmos.org");
 define("EMAIL_SUPPORT", "support@rotarycochincosmos.org");
 
 
-define("WEB_URL", "http://www.rotarycochincosmos.org");
+//define("WEB_URL", "http://www.rotarycochincosmos.org");
 define("SUBSITE_WEB_URL", "http://www.rotarycochincosmos.org/subsite");
 define("WEB_NAME", "rotarycochincosmos.org");
 define("ORG_NAME", "rotarycochincosmos");
+
+define("WEB_URL", "http://rotarycosmos.local");
 ?>

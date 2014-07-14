@@ -24,10 +24,14 @@
                     <td>&nbsp;</td>    
                     <td>&nbsp;</td>
                 </tr>
+                <?php if(!$url_token){?>
                 <tr>
                     <td><?php echo $CAP_password ?></td>
                     <td><input type="password" name="passwd" id="passwd" value="" ></td>
                 </tr>
+                <?php }else{?>
+                <input type="hidden" value="<?php echo $url_token;?>" name="hd_token"/>
+                <?php }?>
                 <tr>
                     <td><?php echo $CAP_new_password ?></td>
                     <td><input  type="password" name="new_passwd" id="new_passwd" ></td>

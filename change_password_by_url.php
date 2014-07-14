@@ -21,9 +21,8 @@ $page = new Page;
 	$page->class_list = array("class_user.php");
 
 	$page->css_list = array("form_table.css");
-	//$page->js_list_link = array("jquery1.9.1/jquery-ui-1.10.2.custom.js", "jquery-ui-functions.js" );
+
 	
-	$page->access_list = array("ROLL_ADMIN","ROLL_MEMBER");
 
     $index=0;
     $content_list[$index]['file_name']='inc_menu.php';

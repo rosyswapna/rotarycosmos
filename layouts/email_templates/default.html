@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head><title></title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=320, target-densitydpi=device-dpi">
+<style type="text/css">
+
+body{
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+#header{
+	background-color: #005DAA;
+	height: 110px;
+}
+#header img{
+	float: left;
+	margin-top: 5px;
+	margin-left: 10px;
+	margin-right: 20px;
+}
+
+#org_name{
+	padding-top:20px;
+	line-height: 30px;
+	color: #fff;
+	font-size: 28px;
+}
+
+#content{
+	margin-left:10%;
+	margin-right:10%;
+	margin-top:2%;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+</style>
+</head>
+<body>
+	<div id="header">
+		<img src="<?php echo ROOT_PATH?>images/layouts/default/rilogo.png">
+		<div id="org_name">
+			<span>ROTARY E-CLUB OF </span><br/>
+			<span><strong>COCHIN COSMOS</strong></span>
+		</div>
+
+	</div>
+	<div id="content">
+		<?php if(isset($email_template_content)){ echo $email_template_content;  } ?>
+	</div>
+	<div id="footer">
+		
+	</div>
+</body>
+</html>

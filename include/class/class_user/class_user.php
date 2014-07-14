@@ -251,10 +251,123 @@ function delete(){
 }
 
 
+function check_email(){
+
+    $strSQL = "SELECT password FROM users WHERE username = '".$this->username."'";
+    $rsRES = mysql_query($strSQL,$this->connection) or die(mysql_error(). $strSQL );
+    if ( mysql_num_rows($rsRES) > 0 ){
+       $password = mysql_result($rsRES,0,'password');
+       return $password;
+    }
+    else{echo "hif";exit();
+        return false;
+    }
+
+}
+
+function forgot_password_email(){
+        $headers="";
+        $strMailbody="";
+        $strTo="";
+        $strSubject="";
+        $strSQL = "SELECT M.first_name,M.last_name FROM users U, memberdetails M WHERE U.username = '".$this->username."' AND M.user_id = U.id";
+            $rsRES = mysql_query($strSQL,$this->connection) or die(mysql_error(). $strSQL );
+            if ( mysql_num_rows($rsRES) > 0 ){
+                
+            $this->first_name = mysql_result($rsRES,0,'first_name');
+            $this->last_name = mysql_result($rsRES,0,'last_name');
+            
+        if($this->first_name!='' && $this->last_name!=''){
+        $name=$this->first_name." ".$this->last_name;
+        }else
+        {
+        $name=$this->username;  
+            
+        }
 
 
+        $strFrom=EMAIL_NO_REPLY;
+        $strTo=$this->username;
+        $headers  .= 'MIME-Version: 1.0' . "\r\n";
+        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+        'X-Mailer: PHP/' . phpversion(). "\r\n";
+        $headers .= "From: Mydailytest.com <".$strFrom.">"."\r\n";
+      
 
+        $strSubject = "Password Reset email";
+         $strMailbody .= "Dear ".$name.",<br /><br />";
+       // $strMailbody .= "You have requested for a password reset link.";
 
+        $strMailbody .= "<a href='".WEB_URL."/change_password_by_url.php?password_token=".$this->password;
+         $strMailbody .="&access=".ROLL_MEMBER;
+        $strMailbody .= "'>Click Here To Reset Your Password</a><br />Thanks,<br />
+            ".WEB_NAME."<br /><br />";
+        $strMailbody .="If clicking the link does not work, just copy and paste the entire link into your browser. If you are still having problems, simply forward this email to ".EMAIL_SUPPORT." and we will do our best to help you.";
+    
+   
+    $strMailbody=$this->get_email_template($strMailbody);
+     echo  $strMailbody;exit();
+
+    
+
+    mail($strTo,$strSubject,$strMailbody,$headers); 
+    return true;
+        }
+
+    }
+
+    function get_email_template($message, $template_name = "default.html")
+    {               
+        ob_start(); 
+        $template_filename = ROOT_PATH."/layouts/email_templates/".$template_name;
+        eval("\$template_filename = \"$template_filename\";");
+        if (file_exists($template_filename)) {
+            $email_template_content = $message;
+            include($template_filename);
+        }else{
+            echo 'File :: '.$template_filename ." not exists. <br/>";
+        }
+        $email_content .= ob_get_contents();
+        ob_end_clean();
+        return $email_content;
+    }
+
+    function reset_password($newpasswd,$password_token){
+            
+        $strSQL1 = "SELECT id FROM users WHERE password ='".$password_token."'";
+
+        $rsRES1 = mysql_query($strSQL1,$this->connection) or die(mysql_error(). $strSQL1);
+
+        if ( mysql_num_rows($rsRES1) > 0 ){
+
+            $this->id = mysql_result($rsRES1,0,'id');
+           
+            $strSQL = "UPDATE users SET ";
+            $strSQL .= "password = '" .mysql_real_escape_string($newpasswd). "'";
+            $strSQL .= " WHERE id = '" . $this->id . "'";
+
+            //echo $strSQL;exit();
+                
+            $rsRES = mysql_query($strSQL,$this->connection) or die(mysql_error(). $strSQL );
+            if ( mysql_affected_rows($this->connection) > 0 ) {
+
+                $this->error_description = "Password Changed";
+                return true;
+
+            }
+            else{
+
+                return false;
+                $this->error_description = "Could not change your password .Contact administrator";
+            }
+
+        }else{
+            return false;
+            $this->error_description = "Incorrect Token";
+        }
+    }
+
+ 
 
 }
 ?>

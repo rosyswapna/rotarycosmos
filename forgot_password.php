@@ -9,7 +9,7 @@ $page = new Page;
 	
 	$page->current_url = $current_url;	// current url for pages
 	$page->title = "Rotary";	// page Title
-	$page->page_name = 'change_password';		// page name for menu and other purpose
+	$page->page_name = 'forgot_password';		// page name for menu and other purpose
 	$page->layout = 'default.html';		// layout name
 
     
@@ -22,8 +22,7 @@ $page = new Page;
 
 	$page->css_list = array("form_table.css");
 	//$page->js_list_link = array("jquery1.9.1/jquery-ui-1.10.2.custom.js", "jquery-ui-functions.js" );
-	
-	$page->access_list = array("ROLL_ADMIN","ROLL_MEMBER");
+	$page->access_list = array();
 
     $index=0;
     $content_list[$index]['file_name']='inc_menu.php';
@@ -37,7 +36,7 @@ $page = new Page;
 
 
     $page->plugin_path = 'plugins/user/'; 
-    $page->plugin = 'change_password';
+    $page->plugin = 'forgot_password';
 
 	$page->display(); //completed page with dynamic cintent will be displayed
 ?>

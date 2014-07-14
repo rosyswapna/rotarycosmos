@@ -28,9 +28,16 @@ if(!isset($_SESSION[SESSION_TITLE.'member_userid'])){
 	    	<input class="login_box"  type="password" name="passwd" id="passwd" >		    </td>
 		  </tr>
 		  <tr>
-		    <td height="35" colspan="2" align="center" bgcolor="#f2f2f2">
-<input  value="<?php echo $submit_sign_in ?>" type="submit" name="submit" >
-          <input name="h_id" value="<?php if(isset($h_id))echo $h_id; ?>" type="hidden"><input name="h_login" value="pass" type="hidden">		  </tr>
+
+		    <td height="35"  align="left" bgcolor="#f2f2f2" colspan="2">
+
+		    	<a href="forgot_password.php">Forgot Password?</a>
+		    	
+				<input  value="<?php echo $submit_sign_in ?>" type="submit" name="submit" >
+          		<input name="h_id" value="<?php if(isset($h_id))echo $h_id; ?>" type="hidden">
+          		<input name="h_login" value="pass" type="hidden">	
+          	</td>	 
+          </tr>
 		</table>
 	  </form>
 <div class="login_error">
