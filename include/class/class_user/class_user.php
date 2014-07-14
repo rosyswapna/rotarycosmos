@@ -259,7 +259,7 @@ function check_email(){
        $password = mysql_result($rsRES,0,'password');
        return $password;
     }
-    else{echo "hif";exit();
+    else{
         return false;
     }
 
@@ -306,7 +306,7 @@ function forgot_password_email(){
         
        
             $strMailbody=$this->get_email_template($strMailbody);
-            //   echo  $strMailbody;exit();
+              // echo  $strMailbody;exit();
 
             
 
@@ -335,6 +335,9 @@ function forgot_password_email(){
     }
 
     function reset_password($newpasswd,$password_token){
+
+        if($newpasswd == $password_token)
+            return true;
             
         $strSQL1 = "SELECT id FROM users WHERE password ='".$password_token."'";
 

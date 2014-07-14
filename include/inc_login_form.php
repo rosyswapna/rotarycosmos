@@ -31,7 +31,7 @@ if(!isset($_SESSION[SESSION_TITLE.'member_userid'])){
 
 		    <td height="35"  align="left" bgcolor="#f2f2f2" colspan="2">
 
-		    	<a href="forgot_password.php">Forgot Password?</a>
+		    	<a href="forgot_password.php" style="font-size:10px;margin:0px 10px 0px 5px;text-decoration:none;">Forgot Password?</a>
 		    	
 				<input  value="<?php echo $submit_sign_in ?>" type="submit" name="submit" >
           		<input name="h_id" value="<?php if(isset($h_id))echo $h_id; ?>" type="hidden">
