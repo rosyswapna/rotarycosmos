@@ -291,14 +291,14 @@ function forgot_password_email(){
             $headers  .= 'MIME-Version: 1.0' . "\r\n";
             $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
             'X-Mailer: PHP/' . phpversion(). "\r\n";
-            $headers .= "From: Mydailytest.com <".$strFrom.">"."\r\n";
+            $headers .= "From: Rotary Cochin Cosmos E-Club <".$strFrom.">"."\r\n";
           
 
             $strSubject = "Password Reset email";
              $strMailbody .= "Dear ".$name.",<br /><br />";
            // $strMailbody .= "You have requested for a password reset link.";
 
-            $strMailbody .= "<a href='".WEB_URL."/change_password_by_url.php?password_token=".$this->password;
+            $strMailbody .= "<a href='".WEB_URL."/change_password_by_url.php?password_token=".$this->password."&un=".$this->username;
              $strMailbody .="&access=".ROLL_MEMBER;
             $strMailbody .= "'>Click Here To Reset Your Password</a><br />Thanks,<br />
                 ".WEB_NAME."<br /><br />";
@@ -334,12 +334,12 @@ function forgot_password_email(){
         return $email_content;
     }
 
-    function reset_password($newpasswd,$password_token){
+    function reset_password($newpasswd,$password_token,$username= ""){
 
         if($newpasswd == $password_token)
             return true;
             
-        $strSQL1 = "SELECT id FROM users WHERE password ='".$password_token."'";
+        $strSQL1 = "SELECT id FROM users WHERE password ='".$password_token."' AND username= '".$username."'";
 
         $rsRES1 = mysql_query($strSQL1,$this->connection) or die(mysql_error(). $strSQL1);
 

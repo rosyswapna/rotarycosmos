@@ -1,9 +1,14 @@
 <?php
 
-if(isset($_GET['password_token'])){
+
+
+
+if(isset($_GET['password_token']) && isset($_GET['un'])){
   $url_token = $_GET['password_token'];
+  $user_name = $_GET['un'];
 }else{
   $url_token = false;
+  $user_name = "";
 }
 
 
@@ -36,9 +41,10 @@ if (isset($_POST['submit']) && $_POST['submit'] == $CAP_change){
     $myuser = new User();
     $myuser->connection = $myconnection;
 
+
     if($password_token){
 
-      $chk = $myuser->reset_password(md5(trim($_POST['new_passwd'])),$password_token);
+      $chk = $myuser->reset_password(md5(trim($_POST['new_passwd'])),$password_token,$user_name);
       if ($chk){
         $_SESSION[SESSION_TITLE.'flash'] = "Password Changed Successfully";
         $_SESSION[SESSION_TITLE.'flash_redirect_page'] = "index.php";
